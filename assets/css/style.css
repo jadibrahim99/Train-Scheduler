@@ -1,0 +1,16 @@
+body{
+    background: #FF3224;
+    background: -moz-linear-gradient(45deg, #FF3224 0%, #000000 50%, #FF3224 100%);
+    background: -webkit-linear-gradient(45deg, #FF3224 0%, #000000 50%, #FF3224 100%);
+    background: linear-gradient(45deg, #FF3224 0%, #000000 50%, #FF3224 100%);
+}
+
+.card-header{
+    background-color: black;
+}
+.card-body{
+    background-color: black;
+}
+.jumbotron{
+    background-color: black;
+}

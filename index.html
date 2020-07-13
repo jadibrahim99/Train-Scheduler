@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Train Scheduler</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Train Tracker -->
+    <div class="container">
+
+        <!-- Jumbotron -->
+        <div class="jumbotron bg-dark text-white">
+            <h1 class="text-center">Anytime is Train Time</h1>
+        </div>
+
+        <div class="card mb-4 bg-dark text-white">
+            <div class="card-header text-center">
+                <h2 id="currentTime">The current time is: </h2>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <!-- Current Trains-->
+                <div class="card mb-4 bg-dark text-white">
+                    <div class="card-header text-center">Current Train Schedule</div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover text-center" id='trainTable'>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Train Name</th>
+                                    <th scope="col">Destination</th>
+                                    <th scope="col">Frequency (min)</th>
+                                    <th scope="col">Next Arrival</th>
+                                    <th scope="col">Minutes Away</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Add Train  -->
+                <div class="card mb-4 bg-dark text-white">
+                    <div class="card-header">Add Train</div>
+                    <div class="card-body">
+
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="trainNameInput">Train Name</label>
+                                <input class="form-control bg-dark text-white" id="trainNameInput" placeholder="Choo Choo"
+                                    type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="destinationInput">Destination</label>
+                                <input class="form-control bg-dark text-white" id="destinationInput" placeholder="New York"
+                                    type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="firstTrainInput">First Train Time (HH:mm - military time)</label>
+                                <input class="form-control bg-dark text-white" id="firstTrainInput" placeholder="09:00"
+                                    type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequencyInput">Frequency (min)</label>
+                                <input class="form-control bg-dark text-white" id="frequencyInput" placeholder="30"
+                                    type="text">
+                            </div>
+                            <button class="btn btn-primary bg-light text-dark" id="addTrainBtn">Submit</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>  
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!-- JavaScript -->
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+</body>
+
+</html>
